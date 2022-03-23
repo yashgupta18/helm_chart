@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: helm-practice-3
+  name: helm-practice-1
   labels:
     purpose: demonstrate-command
 spec:
@@ -15,6 +15,6 @@ spec:
         - name: NAME
           valueFrom:
             configMapKeyRef:
-              name: fortune-config
-              key: myname
+              name: config-map
+              key: message
   restartPolicy: OnFailure
